@@ -7,17 +7,15 @@ function TaskPage() {
   const [searchParams] = useSearchParams();
   const title = searchParams.get("title");
   const description = searchParams.get("description");
+
   return (
-    <div className="h-screen w-screen bg-emerald-700 p-6">
-      <div className="w-[500px] mx-auto space-y-4">
-        <div className="flex justify-center relative mb-6">
-          <button
-            onClick={() => navigate(-1)}
-            className="absolute left-0 top-0 bottom-0 text-slate-100"
-          >
+    <div className="h-screen w-screen bg-emerald-700 p-4 sm:p-6">
+      <div className="max-w-md mx-auto space-y-4">
+        <div className="flex justify-around items-center mb-6 mr-10">
+          <button onClick={() => navigate(-1)} className="text-slate-100">
             <ChevronLeftIcon />
           </button>
-          <Title>Detalhes da Tarefa</Title>
+          <Title className="text-center  flex-grow">Detalhes da Tarefa</Title>
         </div>
 
         <div className="bg-slate-200 p-4 rounded-md">
